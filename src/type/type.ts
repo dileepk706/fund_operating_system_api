@@ -3,4 +3,5 @@ export interface ClosedPositionsGetType{
     from:number;
     to:number;
     sort?:any
+    filter:any
 }
