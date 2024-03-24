@@ -21,7 +21,7 @@ const investorRepositoryIMPL = (
     const data = await InvestorModel.findById(_id);
     return data;
   };
-  const findOneInvestorByEmail = async (
+  const findOneInvestorByEmail = async ( 
     email: string
   ): Promise<Investor | null> => {
     const data = await InvestorModel.findOne({ email });

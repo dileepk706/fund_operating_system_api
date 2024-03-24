@@ -11,6 +11,7 @@ export const investorUseCase = InvestorUseCase(investorRepositoryIMPL(investorMo
 export const signup = async (req: Request, res: Response) => {
   try {
     const user: Investor = req.body;
+    
     if (!user.name) {
       throw new AppError("name is required field", 401);
     }
@@ -35,6 +36,7 @@ export const signup = async (req: Request, res: Response) => {
 export const login = async (req: Request, res: Response) => {
   try {
     const user: Investor = req.body;
+
     if (!user.email) {
       throw new AppError("email is required field", 401);
     }
